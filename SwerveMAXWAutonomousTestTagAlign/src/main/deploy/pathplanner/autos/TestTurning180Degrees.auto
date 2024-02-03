@@ -1,0 +1,25 @@
+{
+  "version": 1.0,
+  "startingPose": {
+    "position": {
+      "x": 2.0,
+      "y": 5.130810261620524
+    },
+    "rotation": 176.70692440143037
+  },
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Turning180degrees"
+          }
+        }
+      ]
+    }
+  },
+  "folder": "TestAutos",
+  "choreoAuto": false
+}
