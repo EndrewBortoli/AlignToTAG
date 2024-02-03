@@ -4,7 +4,11 @@
 
 package frc.robot.commands.limelight;
 
+import org.photonvision.PhotonCamera;
+
 import edu.wpi.first.wpilibj2.command.Command;
+import frc.robot.subsystems.vision.LimelightObject;
+import frc.robot.subsystems.vision.VisionLL;
 
 public class VisionLLCmd extends Command {
   /**
@@ -13,10 +17,10 @@ public class VisionLLCmd extends Command {
    * @param subsystem The subsystem used by this command.
    */
   public VisionLLCmd() {
-    photonCamera = VisionLLCmd.getInstance();
+    PhotonCamera = VisionLL.getInstance();
     
     
-    addRequirements(photonCamera);
+    addRequirements(Photon);
   }
 
   // Called when the command is initially scheduled.
@@ -28,7 +32,7 @@ public class VisionLLCmd extends Command {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    photonCamera.periodic();
+    PhotonCamera.periodic();
   }
 
   // Called once the command ends or is interrupted.
